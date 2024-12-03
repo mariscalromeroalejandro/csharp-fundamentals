@@ -12,3 +12,4 @@
 /Users/almarisc/Desktop/PROJECTS/c#/HelloWorld/obj/Debug/net9.0/HelloWorld.pdb
 /Users/almarisc/Desktop/PROJECTS/c#/HelloWorld/obj/Debug/net9.0/HelloWorld.genruntimeconfig.cache
 /Users/almarisc/Desktop/PROJECTS/c#/HelloWorld/obj/Debug/net9.0/ref/HelloWorld.dll
+/Users/almarisc/Desktop/PROJECTS/c#/HelloWorld/obj/Debug/net9.0/HelloWorld.sourcelink.json
