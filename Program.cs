@@ -1,4 +1,4 @@
-﻿using HelloWorld.Arrays;
+﻿using HelloWorld.Texts;
 
 namespace HelloWorld
 {
@@ -13,25 +13,10 @@ namespace HelloWorld
             // Exercise3_UniqueNumbers.Run();
             // Exercise4_3Smallest.Run();
 
-            var dateTime = new DateTime(2015, 1, 1);
-            var now = DateTime.Now;
-            var today = DateTime.Today;
-
-            Console.WriteLine($"Hour: {now.Hour}");
-            Console.WriteLine($"Minute: {now.Minute}");
-            Console.WriteLine($"Second: {now.Second}");
-
-            var tomorrow = now.AddDays(1);
-            var yesterday = now.AddDays(-1);
-            
-            
-            Console.WriteLine(now.ToLongDateString());
-            Console.WriteLine(now.ToShortDateString());
-            Console.WriteLine(now.ToLongTimeString());
-            Console.WriteLine(now.ToShortTimeString());
-            Console.WriteLine(now.ToString("yyyy-MM-dd HH:mm:ss"));
-
+            var longSentence = " This is going to be a really really really really really long sentence.";
+            var summary = StringUtility.SummarizeText(longSentence, 25);
+            Console.WriteLine(summary);
 
         }
     }
-} 
+}
