@@ -7,26 +7,22 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-         //File and FileInfo
-         var path = @"c:\temp\myFile.jpg";
-         File.Copy(@"c:\temp\myFile.jpg", @"d:\temp\myfile.jpg", true);
-         File.Delete(path);
-         if (File.Exists(path))
-         {
-             //
-         }
-
-         File.ReadAllText(path);
-         var content = File.ReadAllBytes(path);
-         var fileInfo = new FileInfo(path);
-         fileInfo.CopyTo("...", true);
-         fileInfo.Delete();
-         if (fileInfo.Exists)
-         {
-             //
-         }
-         //fileInfo.Read is not a method
          
+            // Directory and directoryInfo
+            Directory.CreateDirectory(@"c:\temp\folder1");
+            var files = Directory.GetFiles(@"c:\projects\fundamentals", "*.sln", SearchOption.AllDirectories);
+            foreach (var file in files)
+                Console.WriteLine(file);
+            var directories = Directory.GetDirectories(@"c:\projects\fundamentals", "*.*", SearchOption.AllDirectories);
+            foreach (var directory in directories)
+                Console.WriteLine(directory);
+            Directory.Exists("...");
+            
+            var directoryInfo = new DirectoryInfo(@"...");
+            directoryInfo.GetFiles();
+            directoryInfo.GetDirectories();
+            
+            
         }
     }
 }
