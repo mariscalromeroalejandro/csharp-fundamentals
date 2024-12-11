@@ -7,22 +7,14 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-         
-            // Directory and directoryInfo
-            Directory.CreateDirectory(@"c:\temp\folder1");
-            var files = Directory.GetFiles(@"c:\projects\fundamentals", "*.sln", SearchOption.AllDirectories);
-            foreach (var file in files)
-                Console.WriteLine(file);
-            var directories = Directory.GetDirectories(@"c:\projects\fundamentals", "*.*", SearchOption.AllDirectories);
-            foreach (var directory in directories)
-                Console.WriteLine(directory);
-            Directory.Exists("...");
+            var path = @"..\..\..\..\HelloWorld\HelloWorld.txt";
+            var dotIndex = path.IndexOf('.');
+            var extension = path.Substring(dotIndex);
             
-            var directoryInfo = new DirectoryInfo(@"...");
-            directoryInfo.GetFiles();
-            directoryInfo.GetDirectories();
-            
-            
+            Console.WriteLine("Extension: " + Path.GetExtension(path));
+            Console.WriteLine("File name: " + Path.GetFileName(path));
+            Console.WriteLine("File name without extension: " + Path.GetFileNameWithoutExtension(path));
+            Console.WriteLine("Directory name: " + Path.GetDirectoryName(path));
         }
     }
 }
