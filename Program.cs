@@ -7,22 +7,26 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            // Exercises.RunExercises();
-            
-            // Procedural programming
-            Console.WriteLine("What's your name?");
-            var name = Console.ReadLine();
-            Console.WriteLine("Reversed name: " + ReverseName(name));
-        }
+         //File and FileInfo
+         var path = @"c:\temp\myFile.jpg";
+         File.Copy(@"c:\temp\myFile.jpg", @"d:\temp\myfile.jpg", true);
+         File.Delete(path);
+         if (File.Exists(path))
+         {
+             //
+         }
 
-        public static string ReverseName(string name)
-        {
-            var array = new char[name.Length];
-            for (var i = name.Length; i > 0; i--) 
-                array[name.Length - i] = name[i - 1];
-            var reversed = new string(array);
-            
-            return reversed;
+         File.ReadAllText(path);
+         var content = File.ReadAllBytes(path);
+         var fileInfo = new FileInfo(path);
+         fileInfo.CopyTo("...", true);
+         fileInfo.Delete();
+         if (fileInfo.Exists)
+         {
+             //
+         }
+         //fileInfo.Read is not a method
+         
         }
     }
 }
